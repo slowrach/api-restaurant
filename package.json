@@ -4,7 +4,11 @@
   "description": "API para gerenciamento do fluxo de clientes por mesa em um restaurante",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch src/server.ts"
+    "dev": "tsx watch src/server.ts",
+    "make": "knex migrate:make",
+    "latest": "knex migrate:latest",
+    "seed-make": "knex seed:make",
+    "seed-run": "knex seed:run"
   },
   "repository": {
     "type": "git",
@@ -19,7 +23,8 @@
   "dependencies": {
     "express": "^4.19.2",
     "knex": "^3.1.0",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.1.7",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
